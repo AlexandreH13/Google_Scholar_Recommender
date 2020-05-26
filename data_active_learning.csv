@@ -1,0 +1,41 @@
+,link,titulo,citacoes,ano,tipo_arquivo,versao,busca,y,p
+160,https://dl.acm.org/doi/fullHtml/10.1145/319382.319388,Machine learning and data mining,['493'],['1999'],[HTML],['28'],machine+learning,,0.833
+161,http://folk.uio.no/plison/pdfs/talks/machinelearning.pdf,An introduction to machine learning,['394'],['2015'],[PDF],['3'],machine+learning,,0.796
+162,https://arxiv.org/abs/1603.04467,Tensorflow: Large-scale machine learning on heterogeneous distributed systems,['4912'],['2016'],[PDF],['6'],machine+learning,,0.86
+163,https://www.sciencedirect.com/science/article/pii/016727898690240X,"The immune system, adaptation, and machine learning",['1966'],['1986'],[PDF],['11'],machine+learning,,0.552
+164,https://books.google.com.br/books?hl=pt-BR&lr=&id=cnyjBQAAQBAJ&oi=fnd&pg=PP1&dq=machine+learning&ots=5caFMy8Q0t&sig=OTVInp-KGnlASpLHCj3NT2f3jBg,Machine learning: a theoretical approach,['456'],['2014'],[LIVRO],['6'],machine+learning,,0.918
+165,https://www.sciencedirect.com/science/article/pii/S1361841512000333,Machine learning and radiology,['365'],['2012'],[LIVRO],['10'],machine+learning,,0.949
+166,https://www.sciencedirect.com/science/article/pii/S1053811908012263,Machine learning classifiers and fMRI: a tutorial overview,['1397'],['2009'],[LIVRO],['22'],machine+learning,,0.91
+167,https://arxiv.org/abs/1204.6078,Distributed graphlab: A framework for machine learning in the cloud,['1835'],['2012'],[LIVRO],['33'],machine+learning,,0.862
+168,https://researchcommons.waikato.ac.nz/handle/10289/1512,Practical feature subset selection for machine learning,['486'],['1998'],[LIVRO],['2'],machine+learning,,0.744
+169,https://www.sciencedirect.com/science/article/pii/S0097848501000948,Drug design by machine learning: support vector machines for pharmaceutical data analysis,['733'],['2001'],[LIVRO],['12'],machine+learning,,0.846
+170,https://academic.oup.com/bib/article-abstract/7/1/86/264025,Machine learning in bioinformatics,['644'],['2006'],[LIVRO],['9'],machine+learning,,0.876
+171,http://www.nowpublishers.com/article/Details/MAL-044,Determinantal point processes for machine learning,['516'],['2012'],[LIVRO],['12'],machine+learning,,0.973
+172,http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.43.3153,Sparse greedy matrix approximation for machine learning,['760'],['2000'],[LIVRO],['7'],machine+learning,,0.769
+173,https://link.springer.com/article/10.1023/A:1008942012299,Multiagent systems: A survey from a machine learning perspective,['1565'],['2000'],[LIVRO],['49'],machine+learning,,0.832
+174,https://researchcommons.waikato.ac.nz/handle/10289/1024,Correlation-based feature selection of discrete and numeric class machine learning,['1939'],['2000'],[LIVRO],['14'],machine+learning,,0.823
+175,https://dl.acm.org/doi/abs/10.5555/2946645.2946679,Mllib: Machine learning in apache spark,['1291'],['2016'],[LIVRO],['19'],machine+learning,,0.847
+176,https://dl.acm.org/doi/abs/10.1145/3052973.3053009,Practical black-box attacks against machine learning,['1084'],['2017'],[LIVRO],['9'],machine+learning,,0.921
+177,https://www.morganclaypool.com/doi/abs/10.2200/s00324ed1v01y201102aim010,Learning with support vector machines,['267'],['2011'],[LIVRO],['7'],machine+learning,,0.777
+178,https://epubs.siam.org/doi/abs/10.1137/16M1080173,Optimization methods for large-scale machine learning,['972'],['2018'],[LIVRO],['16'],machine+learning,,0.986
+179,http://www.jmlr.org/papers/v11/sonnenburg10a.html,The SHOGUN machine learning toolbox,['319'],['2010'],[LIVRO],['27'],machine+learning,,0.883
+180,https://www.sciencedirect.com/science/article/pii/S0957417409004801,Intrusion detection by machine learning: A review,['732'],['2009'],[LIVRO],['9'],machine+learning,,0.815
+181,https://www.usenix.org/conference/osdi14/technical-sessions/presentation/li_mu,Scaling distributed machine learning with the parameter server,['888'],['2014'],[LIVRO],['27'],machine+learning,,0.936
+182,https://www.aaai.org/Papers/Workshops/2000/WS-00-05/WS00-05-001.pdf,Machine learning from imbalanced data sets 101,['484'],"['2000', '2000']",[PDF],['15'],machine+learning,,0.801
+183,https://link.springer.com/content/pdf/10.1007/978-1-4419-9326-7.pdf,Ensemble machine learning: methods and applications,['416'],['2012'],[LIVRO],['6'],machine+learning,,0.969
+184,https://www.nature.com/articles/nphys4035,Machine learning phases of matter,['552'],['2017'],[HTML],['8'],machine+learning,,0.945
+185,https://link.springer.com/article/10.1007/s00521-013-1362-6,A survey of multi-view machine learning,['530'],['2013'],[HTML],['10'],machine+learning,,0.948
+186,https://infoscience.epfl.ch/record/82802/files/rr02-46.pdf,Torch: a modular machine learning software library,['490'],['2002'],[PDF],['8'],machine+learning,,0.749
+187,https://www.nature.com/articles/nrg3920,Machine learning applications in genetics and genomics,['692'],['2015'],[PDF],['15'],machine+learning,,0.835
+188,https://dl.acm.org/citation.cfm?id=1073102,Improving machine learning approaches to coreference resolution,['811'],"['40', '2002']",[PDF],['23'],machine+learning,,0.853
+189,https://aip.scitation.org/doi/abs/10.1063/1.4966192,Perspective: Machine learning potentials for atomistic simulations,['319'],['2016'],[PDF],['6'],machine+learning,,0.838
+190,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5070532/,"Predicting the future—big data, machine learning, and clinical medicine",['837'],['2016'],[HTML],['7'],machine+learning,,0.933
+191,https://www.ahajournals.org/doi/abs/10.1161/circulationaha.115.001593,Machine learning in medicine,['533'],['2015'],[HTML],['13'],machine+learning,,0.897
+192,https://www.worldscientific.com/doi/abs/10.1142/S0129065704001899,Gaussian processes for machine learning,['567'],['2004'],[HTML],['14'],machine+learning,,0.89
+193,https://www.aeaweb.org/articles?id=10.1257/jep.31.2.87,Machine learning: an applied econometric approach,['540'],['2017'],[HTML],['14'],machine+learning,,0.84
+194,http://www.temida.si/~bojan/_resources/Cestnik_Estimating_probabilities.pdf,Estimating probabilities: a crucial task in machine learning.,['666'],['1990'],[PDF],['5'],machine+learning,,0.598
+195,http://www.jmlr.org/papers/v11/rasmussen10a.html,Gaussian processes for machine learning (GPML) toolbox,['629'],['2010'],[PDF],['15'],machine+learning,,0.957
+196,https://www.sciencedirect.com/science/article/pii/S093336570100077X,"Machine learning for medical diagnosis: history, state of the art and perspective",['1122'],['2001'],[PDF],['12'],machine+learning,,0.747
+197,https://pubs.rsna.org/doi/abs/10.1148/rg.2017160130,Machine learning for medical imaging,['299'],['2017'],[LIVRO],['7'],machine+learning,,0.921
+198,https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/tramer,Stealing machine learning models via prediction apis,['479'],"['25', '2016']",[LIVRO],['20'],machine+learning,,0.973
+199,https://link.springer.com/article/10.1007/s10462-007-9052-3,Machine learning: a review of classification and combining techniques,['687'],['2006'],[LIVRO],['21'],machine+learning,,0.95
