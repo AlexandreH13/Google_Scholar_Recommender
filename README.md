@@ -3,7 +3,7 @@
 <p align="justify"> Recomendação de links do Google Scholar usando Machine Learning. </p>
 
 ## Deploy da Aplicação com Heroku: :dash:
-https://evening-wildwood-83681.herokuapp.com/
+https://shielded-tundra-00755.herokuapp.com/
 
 ## Linguagens e libs utilizadas :books:
 
