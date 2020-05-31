@@ -3,13 +3,13 @@ from flask import Flask
 import os
 import json
 import run_backend
+from collections import OrderedDict
 
 import time
 
 app = Flask(__name__)
 
 def get_predictions():
-    count_id = 0
     links = []
     
     novos_links_json = "novos_links.json"
@@ -17,7 +17,8 @@ def get_predictions():
     if not os.path.exists(novos_links_json):
         run_backend.update_db()
     
-    last_update = os.path.getmtime(novos_links_json) * 1e9
+    last_update_epch = os.path.getmtime(novos_links_json)
+    last_update = time.ctime(last_update_epch)
 
     with open("novos_links.json", 'r') as data_file:
         for line in data_file:
@@ -26,21 +27,22 @@ def get_predictions():
 
     predictions = []
     for link in links:
-        predictions.append((link['link_id'], link['titulo'], float(link['score'])))
+        if link in predictions:
+            continue
+        else:
+            predictions.append((link['link_id'], link['titulo'], float(link['score'])))
     
     #Ordena do mais interessante ao menos interessante, apresentando apenas 30
-    predictions = sorted(predictions, key=lambda x: x[2], reverse=True)[:30]
-
+    predictions = sorted(predictions, key=lambda x: x[2], reverse=True)[:10]
 
     predictions_formatted = []
     for e in predictions:
-        count_id+=1
         predictions_formatted.append("""
             <tr><th>{title}</th><th>{score}</th><th><a href=\"{link}\"><svg class="bi bi-arrow-right-square-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm5.646 10.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L9.793 7.5H5a.5.5 0 0 0 0 1h4.793l-2.147 2.146z"/>
             </svg></a></th></tr>
             """.format(title=e[1], link=e[0], score=e[2]))
-  
+    predictions_formatted = list(OrderedDict.fromkeys(predictions_formatted))
     return '\n'.join(predictions_formatted), last_update
 
 #Decorato python onde passamos a requiseção. Neste caso para raiz
@@ -58,7 +60,7 @@ def main_page():
             </div>
 
             <div class="card-body text-secondary">
-            <h5 class="card-title">Segundos antes da última atualização: {}</h5>
+            <h5 class="card-title">Última atualização: {}</h5>
             </div>
 
         </div>
@@ -70,7 +72,7 @@ def main_page():
         <thead class="thead-dark">
         <tr>
           <th scope="col">Título</th>
-          <th scope="col">Score</th>
+          <th scope="col">Score (%)</th>
           <th scope="col">Link</th>
         </tr>
       </thead>
@@ -81,7 +83,7 @@ def main_page():
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    </body>""".format((time.time_ns() - last_update) / 1e9, preds)
+    </body>""".format(last_update, preds)
 
 
 if __name__ == '__main__':
