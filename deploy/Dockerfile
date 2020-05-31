@@ -25,4 +25,4 @@ CMD gunicorn --bind 0.0.0.0:$PORT wsgi
 #https://github.com/microsoft/LightGBM/blob/master/docker/dockerfile-python
 #https://devcenter.heroku.com/articles/container-registry-and-runtime
 
-#https://evening-wildwood-83681.herokuapp.com/ | https://git.heroku.com/evening-wildwood-83681.git
+#https://shielded-tundra-00755.herokuapp.com/ | https://git.heroku.com/shielded-tundra-00755.git
