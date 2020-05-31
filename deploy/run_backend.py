@@ -9,13 +9,13 @@ def update_db():
     with open("novos_links.json", 'w+') as output:
         for query in queries:
             
-            for page in range(1,4):
+            for page in range(1,2):
                 search_page = download_search_page(page, query)
                 link_list = parse_search_page(search_page)
 
                 for link in link_list:
                     if link['titulo']=="":
-                        return 0
+                        link['titulo']="Título não informado"
                         
                     p = compute_prediction(link)
 
