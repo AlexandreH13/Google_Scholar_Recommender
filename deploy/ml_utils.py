@@ -49,8 +49,6 @@ def encode_tipo_arquivo(data):
 
 ## Transforma a coluna 'titulo'
 def transforma_titulo(col):
-	#print("antes: ", data.shape)
-	#titulo = data['titulo']
 	titulo_vec = vectorizer.transform([str(col)])
 	df_titulo = pd.DataFrame(titulo_vec.toarray(), columns=vectorizer.get_feature_names())
 	return df_titulo
@@ -58,7 +56,7 @@ def transforma_titulo(col):
 ##Define o array de features
 def create_features(data):
 	cols_to_clean = ['citacoes', 'ano', 'tipo_arquivo', 'versao']
-	spec_chars = ["[", "]", "'", " "]
+	spec_chars = ["[", "]", "'", ".", ",", " "]
 
 	##Limpa colunas
 	cleaned_data = clean_data(cols_to_clean, spec_chars, data)
@@ -75,10 +73,10 @@ def create_features(data):
 
 	##Transforma a coluna 'titulo'
 	titulo = transforma_titulo(data['titulo'])
-
+	
 	##array de features
+	data = data[['citacoes', 'ano', 'versao', 'CITAÇÃO', 'DOC', 'HTML', 'LIVRO', 'PDF']]
 	feature_array = data.join(titulo)
-	feature_array = feature_array.drop(['link', 'titulo', 'tipo_arquivo'], axis=1)
 
 	return feature_array
 
@@ -95,8 +93,10 @@ def compute_prediction(data):
 		predict_lgbm = mdl_lgbm.predict_proba(features)[0][1]
 
 		predict_ensemble = 0.5*predict_rf + 0.5*predict_lgbm
+		
+		formated_result = round((predict_ensemble*100), 2)
 
-	return predict_ensemble
+	return formated_result
 
 ##Para monitoramento das previsões
 def log_data(data, feature_array, p):
