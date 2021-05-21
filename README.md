@@ -1,6 +1,6 @@
 <h1 align="center"> Recomendador de Links do Google Scholar </h1>
 
-<p align="justify"> Recomendação de links do Google Scholar usando Machine Learning. </p>
+<p align="justify"> Recomendação de links do Google Scholar usando Machine Learning. Deploy no Heroku com Flask e Docker</p>
 
 ## Deploy da Aplicação com Heroku: :dash:
 https://shielded-tundra-00755.herokuapp.com/
